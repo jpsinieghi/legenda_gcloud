@@ -8,7 +8,8 @@ def legenda_gcs(gcs_uri):
     config = types.RecognitionConfig(
         encoding=enums.RecognitionConfig.AudioEncoding.FLAC,
         sample_rate_hertz=44100,
-        language_code='pt-BR')
+        language_code='pt-BR',
+		enableWordTimeOffsets:'true')
 
     operation = client.long_running_recognize(config, audio)
 
@@ -21,3 +22,4 @@ def legenda_gcs(gcs_uri):
         file.write('{}\n'.format(result.alternatives[0].transcript))
     file.close()
 	
+#gsutil acl ch -u AllUsers:R "gs://legenda/mono02.flac"
