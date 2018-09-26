@@ -30,8 +30,10 @@ def legenda_gcs(gcs_uri):
 	
 #gsutil acl ch -u AllUsers:R "gs://legenda/mono02.flac" para deixar arquivo publico no Storage
 #set GOOGLE_APPLICATION_CREDENTIALS = c:\MyProject.json
+#export GOOGLE_APPLICATION_CREDENTIALS="/home/joao_sinieghi/chave.json"
 
 ##Ambiente de desenvolvimento do Python##
 #cd your-project
 #virtualenv --python python3 env
 #.\env\Scripts\activate
+#source env/bin/activate
